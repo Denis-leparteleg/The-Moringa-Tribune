@@ -5,10 +5,8 @@ from django.http  import HttpResponse,Http404
 
 # Create your views here.
 
-def welcome(request):
-    return render(request, 'welcome.html')
 
-def news_of_day(request):
+def news_today(request):
     date = dt.date.today()
     return render(request, 'all-news/today-news.html', {"date": date,})
 
